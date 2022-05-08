@@ -28,6 +28,10 @@ public class Cleaner : MonoBehaviour {
 
 
 		} 
+
+		else if(other.tag == "Spore"){
+			Destroy (other.gameObject);
+		}
 		else
 		{
 			EnemyHealth kill = other.gameObject.GetComponent<EnemyHealth> ();

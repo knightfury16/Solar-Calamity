@@ -83,7 +83,7 @@ public class EnemyMovementControler : MonoBehaviour {
 	{
 		if(other.tag=="Player")
 		{
-			if(startChargeTime<Time.time)
+			if(enemySprite != null && startChargeTime<Time.time)
 			{
 				if (enemySprite.flipX == false)
 					enemyRB.AddForce (new Vector2 (-1f, 0f) * ChargingSpeed);

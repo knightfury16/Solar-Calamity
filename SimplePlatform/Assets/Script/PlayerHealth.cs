@@ -124,7 +124,7 @@ public class PlayerHealth : MonoBehaviour {
 
 		dead.SetTrigger ("GameOver");
 
-		retryButton.gameObject.SetActive (true);
+//		retryButton.gameObject.SetActive (true);
 
 
 

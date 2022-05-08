@@ -21,11 +21,13 @@ public class CameraFollow2DPlatform : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		Vector3 targetCameraPos = target.position + offset;
+		if(target != null){
+			Vector3 targetCameraPos = target.position + offset;
 
-		transform.position = Vector3.Lerp (transform.position, targetCameraPos, Smoothing * Time.deltaTime);
+			transform.position = Vector3.Lerp (transform.position, targetCameraPos, Smoothing * Time.deltaTime);
 
-		if (transform.position.y < lowY)
-			transform.position =new Vector3 (transform.position.x, lowY, transform.position.z);
+			if (transform.position.y < lowY)
+				transform.position =new Vector3 (transform.position.x, lowY, transform.position.z);
+		}
 	}
 }
