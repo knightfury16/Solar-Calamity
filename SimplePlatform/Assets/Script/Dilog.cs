@@ -67,6 +67,13 @@ public class Dilog : MonoBehaviour {
 			animator.SetBool ("isOpen",true);
 		}
 	}
+		
+	void OnTriggerExit2D(Collider2D other){
+
+		if(other.tag == "Player"){
+			animator.SetBool ("isOpen", false);
+		}
+	}
 
 	public void SkipDilog()
 	{
